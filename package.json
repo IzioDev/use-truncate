@@ -1,7 +1,11 @@
 {
   "name": "use-truncate",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A react hook to truncate sentences, build in Typescript, supporting CJS and ESM.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IzioDev/use-truncate.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "files": [
