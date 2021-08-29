@@ -1,9 +1,12 @@
 {
   "name": "use-truncate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A react hook to truncate sentences, build in Typescript, supporting CJS and ESM.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
