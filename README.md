@@ -31,3 +31,7 @@ const truncatedValue = useTruncate("This string is too long I guess", {
 ## Contributions
 
 Feel free to open an issue or create a pull request to add your needed features.
+
+### Tests
+
+Tests can be run using Jest. There is a `test` script inside the `package.json`, feel free to use your favorite package manager to run it (npm run test, yarn test, pnpm test).
