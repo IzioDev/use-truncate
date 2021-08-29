@@ -19,6 +19,8 @@ jobs:
           curl -L https://get.pnpm.io/v6.js | node - add --global pnpm@next
       - name: pnpm install
         run: pnpm install
+      - name: Building Package
+        run: pnpm build
       - name: Publish Packages
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
