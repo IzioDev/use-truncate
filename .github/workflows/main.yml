@@ -1,19 +1,27 @@
 name: Node.js Package
+
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
           node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm i -g pnpm
-      - run: pnpm i
-      - run: pnpm publish
+      - name: install pnpm
+        run: |
+          curl -L https://get.pnpm.io/v6.js | node - add --global pnpm@next
+      - name: pnpm install
+        run: pnpm install
+      - name: Publish Packages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          pnpm release
