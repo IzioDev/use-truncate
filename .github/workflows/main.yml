@@ -14,16 +14,13 @@ jobs:
         with:
           node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
-      - name: install pnpm
-        run: |
-          curl -L https://get.pnpm.io/v6.js | node - add --global pnpm@next
-      - name: pnpm install
-        run: pnpm install
+      - name: npm install
+        run: npm install
       - name: Building Package
-        run: pnpm build
+        run: npm build
       - name: Publish Packages
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          pnpm publish
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          npm publish
