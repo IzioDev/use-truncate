@@ -1,6 +1,6 @@
 # use-truncate
 
-`use-truncate` is a lightweight and straightforward truncate function. It's inspired by [cli-truncate](https://www.npmjs.com/package/cli-truncate). The main reason `use-truncate` exists is that I could not find any other way to truncate a string easily in react. The other reason is that I wanted a package that supports both ESM and CJS.
+`use-truncate` is a lightweight (no dependencies) and straightforward truncate function. It's inspired by [cli-truncate](https://www.npmjs.com/package/cli-truncate). The main reason `use-truncate` exists is that I could not find any other way to truncate a string easily in react. The other reason is that I wanted a package that supports both ESM and CJS.
 
 # Installation
 
@@ -25,12 +25,16 @@ const truncatedValue = useTruncate("This string is too long I guess", {
 
 ## ESM or CJS
 
-- ESM : `/dist/index.esm.js`
-- CJS : `/dist/index.js`
+- ESM : `/dist/esm/index.js`
+- CJS : `/dist/cjs/index.js`
 
 ## Contributions
 
 Feel free to open an issue or create a pull request to add your needed features.
+
+## Peer Depedenencies
+* react: "^16.8.0  || ^17.0.0 || ^18.0.0"
+* react-dom: "^16.8.0  || ^17.0.0 || ^18.0.0"
 
 ### Tests
 

@@ -1,3 +1,4 @@
+import {describe, expect, it} from '@jest/globals';
 import { renderHook } from "@testing-library/react-hooks/dom";
 import { useTruncate } from "./use-truncate";
 

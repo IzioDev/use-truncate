@@ -3,7 +3,6 @@ import { useMemo } from "react";
 type UseTruncateOptions = {
   maxLength?: number;
   ellipsis?: string;
-  trim?: boolean;
 };
 
 const getPreferredOptions = (
@@ -11,7 +10,6 @@ const getPreferredOptions = (
 ): Required<UseTruncateOptions> => ({
   maxLength: options?.maxLength ?? Infinity,
   ellipsis: options?.ellipsis ?? "...",
-  trim: options?.trim ?? true,
 });
 
 /**
