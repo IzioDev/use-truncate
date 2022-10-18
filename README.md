@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/use-truncate.svg)](https://badge.fury.io/js/use-truncate)
+
 # use-truncate
 
 `use-truncate` is a lightweight (no dependencies) and straightforward truncate function. It's inspired by [cli-truncate](https://www.npmjs.com/package/cli-truncate). The main reason `use-truncate` exists is that I could not find any other way to truncate a string easily in react. The other reason is that I wanted a package that supports both ESM and CJS.
